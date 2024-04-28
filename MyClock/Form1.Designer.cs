@@ -28,12 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            label1 = new Label();
+            label2 = new Label();
+            SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label1.Location = new Point(12, 18);
+            label1.Name = "label1";
+            label1.Size = new Size(337, 106);
+            label1.TabIndex = 0;
+            label1.Text = "00:00:00";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 37.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label2.Location = new Point(12, 115);
+            label2.Name = "label2";
+            label2.Size = new Size(337, 85);
+            label2.TabIndex = 1;
+            label2.Text = "00.00.0000";
+            label2.Click += label2_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlDarkDark;
+            ClientSize = new Size(356, 212);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            Name = "Form1";
+            Text = "MyClock";
+            FormClosed += Form1_FormClosed;
+            Load += Form1_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label1;
+        private Label label2;
     }
 }
